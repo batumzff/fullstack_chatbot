@@ -1,15 +1,11 @@
 {
-  "name": "chatbot-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Chatbot API with backend and frontend",
+  "description": "chatbotApi",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "setup-production": "cd client && npm install --production=false && npm run build && cd .. && npm install",
-    "build-client": "cd client && npm run build",
-    "install-client": "cd client && npm install --production=false",
-    "deploy": "npm run build-client && npm install && npm start"
+    "setup-production":"pnpm install --prefix ./client --production=false && npm run build --prefix ./client && npm install"
   },
   "keywords": [],
   "author": "",

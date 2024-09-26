@@ -24,7 +24,7 @@ dbConnection();
 
 /* ------------------------------------------------------- */
 // Middlewares:
-app.use(express.static(path.join(__dirname, '/client/dist'))) // Static Files
+app.use(express.static(path.join(__dirname, '/client/build'))) // Static Files
 
 // Accept JSON:
 app.use(express.json());
@@ -64,7 +64,7 @@ app.all("/api/v1/*", (req, res) => {
 
 // Serve index.html for all other routes (for frontend routing)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/dist/index.html'));
+  res.sendFile(path.join(__dirname, '/client/buid/index.html'));
 });
 
 /* ------------------------------------------------------- */
